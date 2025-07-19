@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router";
 import SignInPage from "./Pages/auth/SignInPage";
 import SignUpPage from "./Pages/auth/SignUpPage";
-import Layout from "./Pages/layout/Layout";
+import LayoutWrapper from "./components/LayoutWrapper";
 
 function App() {
 
@@ -9,7 +9,13 @@ function App() {
     <Routes>
       <Route path="/signin" element={<SignInPage />} />
       <Route path="/signup" element={<SignUpPage />} />
-      <Route path="/layout" element={<Layout children={<div>MAIN COMPONENT</div>} />} />
+      <Route path="/" element={<LayoutWrapper />} >
+        <Route index element={<div>Dashboard Page</div>} />
+        <Route path="patients" element={<div>Patient Page</div>} />
+        <Route path="appointments" element={<div>Appointment Page</div>} />
+        <Route path="patients" element={<div>Patient Page</div>} />
+        <Route path="doctors" element={<div>Doctor Page</div>} />
+      </Route>
     </Routes>
   )
 }

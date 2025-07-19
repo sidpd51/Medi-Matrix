@@ -10,7 +10,7 @@ import {
     SidebarMenuButton,
     SidebarMenuItem
 } from "@/components/ui/sidebar"
-import { Calendar, ChevronUp, Home, Inbox, Search, Settings, User2 } from "lucide-react"
+import { BadgeCheck, ChevronUp, Home, LogOut, NotebookText, ShieldUser, User2, Users } from "lucide-react"
 import { Link } from "react-router"
 
 const items = [
@@ -20,30 +20,25 @@ const items = [
         icon: Home,
     },
     {
-        title: "Inbox",
-        url: "/inbox",
-        icon: Inbox,
+        title: "Appointment",
+        url: "/appointments",
+        icon: NotebookText,
     },
     {
-        title: "Calendar",
-        url: "/calender",
-        icon: Calendar,
+        title: "Patients",
+        url: "/patients",
+        icon: Users,
     },
     {
-        title: "Search",
-        url: "/search",
-        icon: Search,
-    },
-    {
-        title: "Settings",
-        url: "/settings",
-        icon: Settings,
-    },
+        title: "Doctors",
+        url: "/doctors",
+        icon: ShieldUser,
+    }
 ]
 
 export function AppSidebar() {
     return (
-        <Sidebar variant="floating" collapsible="icon">
+        <Sidebar variant="inset" collapsible="icon">
             <SidebarContent>
                 <SidebarGroup >
                     <SidebarGroupLabel>Application</SidebarGroupLabel>
@@ -81,10 +76,10 @@ export function AppSidebar() {
                                 className="w-[--radix-popper-anchor-width]"
                             >
                                 <DropdownMenuItem>
-                                    <span>Account</span>
+                                    <BadgeCheck /><span>Account</span>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem>
-                                    <span>Sign out</span>
+                                    <LogOut /><span>Sign out</span>
                                 </DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
