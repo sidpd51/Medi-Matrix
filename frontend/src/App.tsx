@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router";
-import SignInPage from "./Pages/Auth/SignInPage";
-import SignUpPage from "./Pages/Auth/SignUpPage";
+import SignInPage from "./Pages/auth/SignInPage";
+import SignUpPage from "./Pages/auth/SignUpPage";
+import Layout from "./Pages/layout/Layout";
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <Routes>
       <Route path="/signin" element={<SignInPage />} />
       <Route path="/signup" element={<SignUpPage />} />
+      <Route path="/layout" element={<Layout children={<div>MAIN COMPONENT</div>} />} />
     </Routes>
   )
 }
