@@ -10,17 +10,17 @@ import {
     SidebarMenuButton,
     SidebarMenuItem
 } from "@/components/ui/sidebar"
-import { BadgeCheck, ChevronUp, Home, LogOut, NotebookText, ShieldUser, User2, Users } from "lucide-react"
+import { BadgeCheck, ChevronUp, Gauge, LogOut, NotebookText, ShieldUser, SquareActivity, User2, Users } from "lucide-react"
 import { Link } from "react-router"
 
 const items = [
     {
-        title: "Home",
+        title: "Dashboard",
         url: "/",
-        icon: Home,
+        icon: Gauge,
     },
     {
-        title: "Appointment",
+        title: "Appointments",
         url: "/appointments",
         icon: NotebookText,
     },
@@ -41,7 +41,9 @@ export function AppSidebar() {
         <Sidebar variant="inset" collapsible="icon">
             <SidebarContent>
                 <SidebarGroup >
-                    <SidebarGroupLabel>Application</SidebarGroupLabel>
+                    <SidebarGroupLabel>
+                        Medi Matrix
+                    </SidebarGroupLabel>
                     <SidebarGroupContent>
                         <SidebarMenu>
                             {
