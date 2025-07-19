@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router";
 import SignInPage from "./Pages/auth/SignInPage";
 import SignUpPage from "./Pages/auth/SignUpPage";
-import LayoutWrapper from "./components/LayoutWrapper";
+import LayoutWrapper from "./components/layout-wrapper";
 
 function App() {
 
