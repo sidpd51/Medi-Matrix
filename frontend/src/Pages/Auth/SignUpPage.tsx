@@ -9,13 +9,12 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Link } from "react-router"
 
-function SignInPage() {
+function SignUpPage() {
     return (
         <div className="w-full h-screen flex justify-center">
-
-            <Card className="mt-32 w-full max-w-sm max-h-82">
+            <Card className="mt-32 w-full max-w-sm max-h-100">
                 <CardHeader>
-                    <CardTitle className="text-center">Sign In to your account</CardTitle>
+                    <CardTitle className="text-center">Sign Up to your account</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <form>
@@ -30,23 +29,19 @@ function SignInPage() {
                                 />
                             </div>
                             <div className="grid gap-2">
-                                <div className="flex items-center">
-                                    <Label htmlFor="password">Password</Label>
-                                    <Link
-                                        to="#"
-                                        className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
-                                    >
-                                        Forgot your password?
-                                    </Link>
-                                </div>
+                                <Label htmlFor="password">Password</Label>
                                 <Input id="password" type="password" required />
+                            </div>
+                            <div className="grid gap-2">
+                                <Label htmlFor="password">Confirm Password</Label>
+                                <Input id="confirm-password" type="password" required />
                             </div>
                         </div>
                         <Button variant="link" className="p-0 mt-3" asChild>
-                            <Link to="/signup">Already have an account ?</Link>
+                            <Link to="/signin">Create an account ?</Link>
                         </Button>
                         <Button type="submit" className="w-full">
-                            Login
+                            Sign Up
                         </Button>
                     </form>
                 </CardContent>
@@ -55,4 +50,4 @@ function SignInPage() {
     )
 }
 
-export default SignInPage;
+export default SignUpPage;
