@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router";
-import SignInPage from "./Pages/Auth/SignInPage";
-import SignUpPage from "./Pages/Auth/SignUpPage";
+import SignInPage from "./Pages/auth/SignInPage";
+import SignUpPage from "./Pages/auth/SignUpPage";
+import LayoutWrapper from "./components/layout-wrapper";
 
 function App() {
 
@@ -8,6 +9,13 @@ function App() {
     <Routes>
       <Route path="/signin" element={<SignInPage />} />
       <Route path="/signup" element={<SignUpPage />} />
+      <Route path="/" element={<LayoutWrapper />} >
+        <Route index element={<div>Dashboard Page</div>} />
+        <Route path="patients" element={<div>Patient Page</div>} />
+        <Route path="appointments" element={<div>Appointment Page</div>} />
+        <Route path="patients" element={<div>Patient Page</div>} />
+        <Route path="doctors" element={<div>Doctor Page</div>} />
+      </Route>
     </Routes>
   )
 }
