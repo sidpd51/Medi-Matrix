@@ -43,7 +43,7 @@ function SignInPage() {
                             </div>
                         </div>
                         <Button variant="link" className="p-0 mt-3" asChild>
-                            <Link to="/signup">Already have an account ?</Link>
+                            <Link to="/signup">Create an account ?</Link>
                         </Button>
                         <Button type="submit" className="w-full">
                             Login
